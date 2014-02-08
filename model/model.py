@@ -2,7 +2,7 @@ import datetime
 
 from google.appengine.ext import db
 from google.appengine.ext.db.metadata import Property
-from base import BaseModel
+from base_model import BaseModel
 from util import dt2ts
 
 

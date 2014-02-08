@@ -1,0 +1,116 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+
+<h1>Bars</h1>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Bar</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_name">Bar name</label>
+  <div class="controls">
+    <input id="bar_name" name="bar_name" type="text" placeholder="Barcode" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_webpage">Webpage</label>
+  <div class="controls">
+    <input id="bar_webpage" name="bar_webpage" type="text" placeholder="www.barcode.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_recommendation">Recommended by</label>
+  <div class="controls">
+    <input id="bar_recommendation" name="bar_recommendation" type="text" placeholder="Paul's brother" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_contact_name">Contact name</label>
+  <div class="controls">
+    <input id="bar_contact_name" name="bar_contact_name" type="text" placeholder="Erica" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_contact_phone">Contact phone</label>
+  <div class="controls">
+    <input id="bar_contact_phone" name="bar_contact_phone" type="text" placeholder="541133322222" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="bar_contact_email">Contact email</label>
+  <div class="controls">
+    <input id="bar_contact_email" name="bar_contact_email" type="text" placeholder="erica@barcode.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="control-group">
+  <label class="control-label" for="bar_days">Days available</label>
+  <div class="controls">
+    <label class="checkbox" for="bar_days-0">
+      <input type="checkbox" name="bar_days" id="bar_days-0" value="Option1">
+      Option1
+    </label>
+  </div>
+</div>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="bar_venue">Venues associated</label>
+  <div class="controls">
+    <select id="bar_venue" name="bar_venue" class="input-xlarge" multiple="multiple">
+      <option>Option1</option>
+    </select>
+  </div>
+</div>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="bar_caterer">Caterers associated</label>
+  <div class="controls">
+    <select id="bar_caterer" name="bar_caterer" class="input-xlarge" multiple="multiple">
+      <option>Option1</option>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="bar_comment">Comment</label>
+  <div class="controls">                     
+    <textarea id="bar_comment" name="bar_comment">Nice tequila</textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <div class="controls">
+    <button id="save_button" name="save_button" class="btn btn-inverse btn-large">Save</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+{% endblock %}

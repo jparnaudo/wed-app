@@ -1,0 +1,116 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+
+<h1>Caterers</h1>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Caterer</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_name">Caterer Name</label>
+  <div class="controls">
+    <input id="caterer_name" name="caterer_name" type="text" placeholder="Homemade Delight" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_webpage">Webpage</label>
+  <div class="controls">
+    <input id="caterer_webpage" name="caterer_webpage" type="text" placeholder="hmdelight.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_contact_name">Contact name</label>
+  <div class="controls">
+    <input id="caterer_contact_name" name="caterer_contact_name" type="text" placeholder="Wren" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_contact_phone">Contact phone</label>
+  <div class="controls">
+    <input id="caterer_contact_phone" name="caterer_contact_phone" type="text" placeholder="541188888888" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_contact_email">Contact email</label>
+  <div class="controls">
+    <input id="caterer_contact_email" name="caterer_contact_email" type="text" placeholder="wren@hmdelight.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="caterer_recommendation">Recommended by</label>
+  <div class="controls">
+    <input id="caterer_recommendation" name="caterer_recommendation" type="text" placeholder="wedmagazine" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="control-group">
+  <label class="control-label" for="caterer_days">Days Available</label>
+  <div class="controls">
+    <label class="checkbox" for="caterer_days-0">
+      <input type="checkbox" name="caterer_days" id="caterer_days-0" value="Option1">
+      Option1
+    </label>
+  </div>
+</div>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="caterer_venue">Venue associated</label>
+  <div class="controls">
+    <select id="caterer_venue" name="caterer_venue" class="input-xlarge" multiple="multiple">
+      <option>Option1</option>
+    </select>
+  </div>
+</div>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="caterer_bar">Bar associated</label>
+  <div class="controls">
+    <select id="caterer_bar" name="caterer_bar" class="input-xlarge" multiple="multiple">
+      <option>Option1</option>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="caterer_comment">Comment</label>
+  <div class="controls">                     
+    <textarea id="caterer_comment" name="caterer_comment">Nice food</textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <div class="controls">
+    <button id="save_button" name="save_button" class="btn btn-inverse btn-large">Save</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+{% endblock %}

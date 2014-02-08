@@ -4,4 +4,128 @@
 
 <h1>Venues</h1>
 
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Venue</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_name">Venue</label>
+  <div class="controls">
+    <input id="venue_name" name="venue_name" type="text" placeholder="Royal Saloon" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_addres">Address</label>
+  <div class="controls">
+    <input id="venue_addres" name="venue_addres" type="text" placeholder="Street, number, city, PO box" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_webpage">Webpage</label>
+  <div class="controls">
+    <input id="venue_webpage" name="venue_webpage" type="text" placeholder="royalsaloon.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_contact_name">Contact name</label>
+  <div class="controls">
+    <input id="venue_contact_name" name="venue_contact_name" type="text" placeholder="Mery Green" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_contact_phone">Contact phone</label>
+  <div class="controls">
+    <input id="venue_contact_phone" name="venue_contact_phone" type="text" placeholder="5411444444" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_contact_email">Contact email</label>
+  <div class="controls">
+    <input id="venue_contact_email" name="venue_contact_email" type="text" placeholder="marygreen@mail.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_recommendation">Recommended by</label>
+  <div class="controls">
+    <input id="venue_recommendation" name="venue_recommendation" type="text" placeholder="Lucy's cousing" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="venue_capacity">Capacity</label>
+  <div class="controls">
+    <input id="venue_capacity" name="venue_capacity" type="text" placeholder="350" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="control-group">
+  <label class="control-label" for="checkboxes">Days Available</label>
+  <div class="controls">
+    <label class="checkbox" for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="Option1">
+      Option1
+    </label>
+  </div>
+</div>
+
+<!-- Prepended checkbox -->
+<div class="control-group">
+  <label class="control-label" for="venue_hour_limitation">Hour limitation</label>
+  <div class="controls">
+    <div class="input-prepend">
+      <span class="add-on">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+      </span>
+      <input id="venue_hour_limitation" name="venue_hour_limitation" class="input-xlarge" type="text" placeholder="from 8 pm to 4 am">
+    </div>
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="venue_comment">Comment</label>
+  <div class="controls">                     
+    <textarea id="venue_comment" name="venue_comment">Nice garden</textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <div class="controls">
+    <button id="save_button" name="save_button" class="btn btn-inverse btn-large">Save</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
 {% endblock %}
