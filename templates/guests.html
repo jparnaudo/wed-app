@@ -1,0 +1,143 @@
+{% extends "templates/base.html" %}
+
+{% block content %}
+
+<h1>Guests</h1>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Guest</legend>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="guest_name">Name</label>
+  <div class="controls">
+    <input id="guest_name" name="guest_name" type="text" placeholder="John" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="guest_surname">Surname</label>
+  <div class="controls">
+    <input id="guest_surname" name="guest_surname" type="text" placeholder="Mayer" class="input-xlarge" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="guest_mail">Mail</label>
+  <div class="controls">
+    <input id="guest_mail" name="guest_mail" type="text" placeholder="john@mayer.com" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="guest_address">Address</label>
+  <div class="controls">
+    <input id="guest_address" name="guest_address" type="text" placeholder="street, number, city, PO box" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="guest_phone">Phone Number</label>
+  <div class="controls">
+    <input id="guest_phone" name="guest_phone" type="text" placeholder="54113333333" class="input-xlarge">
+    
+  </div>
+</div>
+
+<!-- Select Multiple -->
+<div class="control-group">
+  <label class="control-label" for="guest_group">Guest Group</label>
+  <div class="controls">
+    <select id="guest_group" name="guest_group" class="input-xlarge" multiple="multiple">
+      <option>option1</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="control-group">
+  <label class="control-label" for="Invitation Level">Invitation Level</label>
+  <div class="controls">
+    <label class="checkbox" for="Invitation Level-0">
+      <input type="checkbox" name="Invitation Level" id="Invitation Level-0" value="Church" required="required">
+      Church
+    </label>
+    <label class="checkbox" for="Invitation Level-1">
+      <input type="checkbox" name="Invitation Level" id="Invitation Level-1" value="Dinner" required="required">
+      Dinner
+    </label>
+    <label class="checkbox" for="Invitation Level-2">
+      <input type="checkbox" name="Invitation Level" id="Invitation Level-2" value="After Dinner" required="required">
+      After Dinner
+    </label>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="guest_table">Table Number</label>
+  <div class="controls">
+    <select id="guest_table" name="guest_table" class="input-xlarge">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="control-group">
+  <label class="control-label" for="Confirmed">Confirmed</label>
+  <div class="controls">
+    <label class="radio" for="Confirmed-0">
+      <input type="radio" name="Confirmed" id="Confirmed-0" value="Yes" checked="checked">
+      Yes
+    </label>
+    <label class="radio" for="Confirmed-1">
+      <input type="radio" name="Confirmed" id="Confirmed-1" value="No">
+      No
+    </label>
+  </div>
+</div>
+
+<!-- Prepended checkbox -->
+<div class="control-group">
+  <label class="control-label" for="guest_gift">Gift</label>
+  <div class="controls">
+    <div class="input-prepend">
+      <span class="add-on">
+        <label class="checkbox">
+          <input type="checkbox">
+        </label>
+      </span>
+      <input id="guest_gift" name="guest_gift" class="input-xlarge" type="text" placeholder="gift description">
+    </div>
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <div class="controls">
+    <button id="save_button" name="save_button" class="btn btn-inverse btn-large">Save</button>
+  </div>
+</div>
+
+</fieldset>
+
+</form>
+
+
+
+{% endblock %}

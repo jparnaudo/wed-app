@@ -1,0 +1,32 @@
+<script src="/static/js/header.js"></script>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse"
+				data-target=".nav-collapse">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			
+			<a class="brand" href="/">Wed Planner</a>
+			
+		
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li {% if name== "guests" %}class="active"{% endif %}><a
+						href="/guests">Guests</a></li>
+				</ul>
+			</div>
+			
+			<div class="nav-collapse collapse">
+				<ul class="nav">
+					<li {% if name== "venues" %}class="active"{% endif %}><a
+						href="/venues">Venues</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>

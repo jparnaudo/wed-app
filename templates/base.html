@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+{% include "templates/head.html" %}
+
+<title>Wed Planner</title>
+</head>
+
+<body>
+
+	{% include "templates/header.html" %}
+
+	<div class="container" style="padding-top:40px;">
+		{% include "templates/status.html" %}
+	
+		{% block content %} {% endblock %}
+
+
+		{% include "templates/footer.html" %}
+
+	</div>
+
+</body>
+</html>

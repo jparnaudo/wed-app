@@ -1,0 +1,9 @@
+
+
+.image {
+	min-height: 240px;
+}
+
+.image img {
+	border: 1px black gray;
+}
