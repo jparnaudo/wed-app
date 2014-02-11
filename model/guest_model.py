@@ -13,10 +13,9 @@ class Guest(BaseModel):
     address = db.ReferenceProperty(Address)
     phone = db.StringProperty()  
     invitation_level = db.StringProperty(choices=["church", "dinner", "after_dinner"])
-    table = db.IntegerProperty()
     confirmed =  db.StringProperty(choices=[YES, NO])
     guest_group = db.ListProperty(db.Key)
-    # gifts
+    gift = db.StringProperty()
     
     @classmethod
     def get_all(cls):
@@ -27,7 +26,7 @@ class Guest(BaseModel):
         return cls.all().filter("guest_id =", ts).get()
 
     @classmethod
-    def new(cls, gift):
+    def new(cls):
         g = cls()
         g.guest_id = dt2ts(datetime.datetime.now())
         g.address = Address().put()
@@ -35,6 +34,20 @@ class Guest(BaseModel):
         g.put()
         return g
     
+    def update(self, data):
+        #self.address.update(data['address'])
+        del data['address']
+        if 'group' in data:
+            ''' CREAR LOS GUESTGROUPS EN API/BOOTSTRAP! '''
+            #self.add_guest_group(data['group'])
+            del data['group']
+        if 'table' in data:
+            ''' CREAR LAS TABLES EN API/BOOTSTRAP! '''
+            #Table().get('table_number = ', data['table']).add_member(data['guest_id'])
+            del data['table']
+        del data['guest_id']
+        super(Guest, self).update(data)
+        
     def get_full_name(self):
         return self.name + " " + self.surname
     
@@ -45,9 +58,6 @@ class Guest(BaseModel):
     def to_dict_full(self):
         g = db.to_dict(self)
         g["address"] = self.address.to_dict()
-        g["gifts"] = ""
-        for gift in self.gifts:
-            g["gifts"] = g["gifts"] + gift + ","
         return g
     
     
@@ -57,14 +67,6 @@ class Guest(BaseModel):
         if group.key() not in self.guest_group:
             self.guest_group.append(group.key())
             self.put()
-            
-    def add_gift(self, gift_description):
-        Gift(guest=self, gift_description = gift_description).put()
-        
-class Gift(BaseModel):
-    guest = db.ReferenceProperty(Guest, collection_name='gifts')
-    gift_description =  db.StringProperty()
-
   
 class GuestGroup(BaseModel):
     group_name =  db.StringProperty()
@@ -73,3 +75,19 @@ class GuestGroup(BaseModel):
     @property
     def members(self):
         return Guest.gql("WHERE groups = :1", self.key())
+    
+class Table(BaseModel):
+    table_number =  db.StringProperty()
+    table_members = db.ListProperty(db.Key)
+    
+    @property
+    def members(self):
+        return len(self.table_members)
+    
+    def add_member(self, guest_id):
+        guest = Guest.gql("WHERE guest_id = ", guest_id).get()
+        
+        if guest.key() not in self.table_members:
+            self.table_members.append(guest.key())
+            self.put()
+           

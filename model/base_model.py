@@ -1,5 +1,6 @@
 from google.appengine.ext import db
 from util import dt2ts
+import logging
 
 
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
@@ -9,6 +10,8 @@ MONTH_FORMAT = '%Y-%m'
 class BaseModel(db.Model):
     def update(self, data):
         for key, value in data.items():
+            logging.warn(key)
+            logging.warn(value)
             setattr(self, key, value)
         self.put()
 
@@ -26,11 +29,10 @@ class Contact(BaseModel):
     contact_email = db.StringProperty()
     
 class Address(BaseModel):
-    street_address = db.StringProperty()
-    city = db.StringProperty()
+    street = db.StringProperty()
+    number = db.IntegerProperty()
     state = db.StringProperty()
     zip = db.StringProperty()
-    country = db.StringProperty()
     
 class Period(BaseModel):
     start = db.DateProperty()

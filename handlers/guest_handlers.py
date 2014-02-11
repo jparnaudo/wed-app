@@ -1,6 +1,7 @@
 
 from handlers.basic_handlers import JsonAPIHandler
 from model.guest_model import Guest
+import logging
 
 
 class NewGuestHandler(JsonAPIHandler):
@@ -12,6 +13,7 @@ class UpdateGuestHandler(JsonAPIHandler):
     def handle(self):
         
         data = {g: self.request.get(g) for g in self.request.arguments()}
+        logging.warn(data)
         guest_id = int(data["guest_id"])
         g = Guest.get(guest_id)
         g.update(data)

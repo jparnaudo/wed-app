@@ -1,133 +1,136 @@
-<script type="text/javascript" src="/static/js/tab_content/new_guest_form.js"></script>
+<script type="text/javascript"
+	src="/static/js/tab_content/new_guest_form.js"></script>
 
-<legend>New Guest</legend> 
- <form class="form-horizontal">
-<fieldset>
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="guest_name">Name</label>
-  <div class="controls">
-    <input id="guest_name" name="guest_name" type="text" placeholder="John" class="input-xlarge" required="">
-    
-  </div>
-</div>
+<legend>New Guest</legend>
+<form class="form-horizontal" id="new_guest_form">
+	<fieldset>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="name">Name</label>
+			<div class="controls">
+				<input id="name" name="name" type="text"
+					placeholder="John" class="input-xlarge" required="required">
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="guest_surname">Surname</label>
-  <div class="controls">
-    <input id="guest_surname" name="guest_surname" type="text" placeholder="Mayer" class="input-xlarge" required="">
-    
-  </div>
-</div>
+			</div>
+		</div>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="guest_email">Email</label>
-  <div class="controls">
-    <input id="guest_mail" name="guest_mail" type="text" placeholder="john@mayer.com" class="input-xlarge">
-    
-  </div>
-</div>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="surname">Surname</label>
+			<div class="controls">
+				<input id="surname" name="surname" type="text"
+					placeholder="Mayer" class="input-xlarge" required="required">
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="guest_address">Address</label>
-  <div class="controls">
-    <input id="guest_address" name="guest_address" type="text" placeholder="street, number, city, PO box" class="input-xlarge">
-    
-  </div>
-</div>
+			</div>
+		</div>
 
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="guest_phone">Phone Number</label>
-  <div class="controls">
-    <input id="guest_phone" name="guest_phone" type="text" placeholder="54113333333" class="input-xlarge">
-    
-  </div>
-</div>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input id="email" name="email" type="text"
+					placeholder="john@mayer.com" class="input-xlarge">
 
-<!-- Select Multiple -->
-<div class="control-group">
-  <label class="control-label" for="guest_group">Guest Group</label>
-  <div class="controls">
-    <select id="guest_group" name="guest_group" class="input-xlarge" multiple="multiple">
-      <option>option1</option>
-    </select>
-  </div>
-</div>
+			</div>
+		</div>
 
-<!-- Multiple Checkboxes -->
-<div class="control-group">
-  <label class="control-label" for="Invitation Level">Invitation Level</label>
-  <div class="controls">
-    <label class="checkbox" for="Invitation Level-0">
-      <input type="checkbox" name="Invitation Level" id="Invitation Level-0" value="Church" required="required">
-      Church
-    </label>
-    <label class="checkbox" for="Invitation Level-1">
-      <input type="checkbox" name="Invitation Level" id="Invitation Level-1" value="Dinner" required="required">
-      Dinner
-    </label>
-    <label class="checkbox" for="Invitation Level-2">
-      <input type="checkbox" name="Invitation Level" id="Invitation Level-2" value="After Dinner" required="required">
-      After Dinner
-    </label>
-  </div>
-</div>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="address">Address</label>
+			<div class="controls">
+				<input id="address" name="address" type="text"
+					placeholder="street, number, city, PO box" class="input-xlarge">
 
-<!-- Select Basic -->
-<div class="control-group">
-  <label class="control-label" for="guest_table">Table Number</label>
-  <div class="controls">
-    <select id="guest_table" name="guest_table" class="input-xlarge">
-      <option>0</option>
-      <option>1</option>
-      <option>2</option>
-    </select>
-  </div>
-</div>
+			</div>
+		</div>
 
-<!-- Multiple Radios -->
-<div class="control-group">
-  <label class="control-label" for="Confirmed">Confirmed</label>
-  <div class="controls">
-    <label class="radio" for="Confirmed-0">
-      <input type="radio" name="Confirmed" id="Confirmed-0" value="Yes" checked="checked">
-      Yes
-    </label>
-    <label class="radio" for="Confirmed-1">
-      <input type="radio" name="Confirmed" id="Confirmed-1" value="No">
-      No
-    </label>
-  </div>
-</div>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="phone">Phone Number</label>
+			<div class="controls">
+				<input id="phone" name="phone" type="text"
+					placeholder="54113333333" class="input-xlarge">
 
-<!-- Prepended checkbox -->
-<div class="control-group">
-  <label class="control-label" for="guest_gift">Gift</label>
-  <div class="controls">
-    <div class="input-prepend">
-      <span class="add-on">
-        <label class="checkbox">
-          <input type="checkbox">
-        </label>
-      </span>
-      <input id="guest_gift" name="guest_gift" class="input-xlarge" type="text" placeholder="gift description">
-    </div>
-    
-  </div>
-</div>
+			</div>
+		</div>
 
-<!-- Button -->
-<div class="control-group">
-  <div class="controls">
-    <button id="save_button" name="save_button" class="btn btn-inverse btn-large">Save</button>
-  </div>
-</div>
+		<!-- Select Multiple -->
+		<div class="control-group">
+			<label class="control-label" for="group">Guest Group</label>
+			<div class="controls">
+				<select id="group" name="group" class="input-xlarge"
+					multiple="multiple">
+					<option>option1</option>
+				</select>
+			</div>
+		</div>
 
-</fieldset>
+		<!-- Multiple Checkboxes -->
+		<div class="control-group" >
+			<label class="control-label" for="Invitation Level">Invitation
+				Level</label>
+			<div class="controls" >
+				<label class="checkbox" for="Invitation Level-0"> <input
+					type="checkbox" name="Invitation Level" id="Invitation Level-0"
+					value="Church"> Church
+				</label> <label class="checkbox" for="Invitation Level-1"> <input
+					type="checkbox" name="Invitation Level" id="Invitation Level-1"
+					value="Dinner"> Dinner
+				</label> <label class="checkbox" for="Invitation Level-2"> <input
+					type="checkbox" name="Invitation Level" id="Invitation Level-2"
+					value="After Dinner" > After Dinner
+				</label>
+			</div>
+		</div>
+
+		<!-- Select Basic -->
+		<div class="control-group">
+			<label class="control-label" for="table">Table Number</label>
+			<div class="controls">
+				<select id="table" name="table" class="input-xlarge">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+				</select>
+			</div>
+		</div>
+
+		<!-- Multiple Radios -->
+		<div class="control-group">
+			<label class="control-label" for="Confirmed">Confirmed</label>
+			<div class="controls">
+				<label class="radio" for="Confirmed-0"> <input type="radio"
+					name="Confirmed" id="Confirmed-0" value="Yes">
+					Yes
+				</label> <label class="radio" for="Confirmed-1"> <input type="radio"
+					name="Confirmed" id="Confirmed-1" value="No" checked="checked"> No
+				</label>
+			</div>
+		</div>
+
+		<!-- Prepended checkbox -->
+		<div class="control-group">
+			<label class="control-label" for="gift">Gift</label>
+			<div class="controls">
+				<div class="input-prepend">
+					<span class="add-on"> <label class="checkbox"> <input
+							type="checkbox">
+					</label>
+					</span> <input id="gift" name="gift" class="input-xlarge"
+						type="text" placeholder="gift description">
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Button -->
+		<div class="control-group">
+			<div class="controls">
+				<button id="save_button" name="save_button"
+					class="btn btn-inverse btn-large">Save</button>
+			</div>
+		</div>
+
+	</fieldset>
 
 </form>
- 
