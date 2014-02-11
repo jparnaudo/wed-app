@@ -9,8 +9,8 @@ handlers:
   static_dir: static
 
 - url: /tab_content
-  static_dir: tab_content
-  
+  static_dir: templates/tab_content
+
 - url: .*
   script: wed_app.app
 

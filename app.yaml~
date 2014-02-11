@@ -8,9 +8,13 @@ handlers:
 - url: /static
   static_dir: static
 
-- url: /forms
-  static_dir: forms
-  
+- url: /tab_content
+  static_dir: templates/tab_content
+
+- url: /tab_content_js
+  static_dir: static/js/tab_content
+
+
 - url: .*
   script: wed_app.app
 
