@@ -1,0 +1,77 @@
+Guest
+- name
+- surname
+- couple
+- address
+- phone number
+- email
+- group
+- invitation level
+- gift
+
+Group
+- name (eg: family core, relative, friend)
+
+Venue
+- name
+- contact name
+- email
+- phone number
+- amenities
+- caterer_is_optional
+- caterer
+- bar_is_optional
+- bar
+- dj_is_optional
+- dj
+- decorator_is_optional
+- decorator
+
+Amenities
+- air conditioning
+- generator
+- furniture
+- 
+
+Caterer
+- name
+- contact name
+- email
+- phone number
+- recommended by
+- has_discount_with_venue
+- food_menu
+
+Food Menu
+- description
+- price_per_person 
+- te_amo
+Bar
+- name
+- contact name
+- email
+- phone number
+- bar option
+
+Bar option
+- description
+- price
+DJ
+- name
+- contact name
+- email
+- phone number
+- price
+- venue
+
+Decorator
+- name
+- contact name
+- email
+- phone number
+- decoration_option
+- venue
+
+Decoration option
+- description
+- price
