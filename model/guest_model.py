@@ -39,7 +39,7 @@ class Guest(BaseModel):
         del data['address']
         if 'group' in data:
             ''' CREAR LOS GUESTGROUPS EN API/BOOTSTRAP! '''
-            #self.add_guest_group(data['group'])
+            #self.add_to_guest_group(data['group'])
             del data['group']
         if 'table' in data:
             ''' CREAR LAS TABLES EN API/BOOTSTRAP! '''
@@ -61,7 +61,7 @@ class Guest(BaseModel):
         return g
     
     
-    def add_guest_group(self, guest_group):
+    def add_to_guest_group(self, guest_group):
         group = GuestGroup.gql("WHERE name = ", guest_group).get()
         
         if group.key() not in self.guest_group:
@@ -75,6 +75,21 @@ class GuestGroup(BaseModel):
     @property
     def members(self):
         return Guest.gql("WHERE groups = :1", self.key())
+    
+    @classmethod
+    def new(cls, group_name):
+        gg = cls()
+        gg.group_name = group_name
+        gg.group_size = 0
+        gg.put()
+        return gg
+    
+    @classmethod
+    def get_all(cls):
+        return cls.all()
+    
+    
+    
     
 class Table(BaseModel):
     table_number =  db.StringProperty()

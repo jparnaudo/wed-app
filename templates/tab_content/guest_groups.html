@@ -1,0 +1,31 @@
+<script type="text/javascript" src="/static/js/tab_content/new_guest_group.js"></script>
+<script type="text/javascript" src="/static/js/tab_content/guest_groups_table.js"></script>
+
+<legend>New Guest Group</legend>
+<form class="form-horizontal" id="new_guest_group_form">
+	<fieldset>
+		<!-- Text input-->
+		<div class="control-group">
+			<label class="control-label" for="group_name">Guest Group</label>
+			<div class="controls">
+				<input id="group_name" name="group_name" type="text"
+					placeholder="Family Core" class="input-xlarge" required="required">
+			</div>
+		</div>
+
+		<!-- Button -->
+		<div class="control-group">
+			<div class="controls">
+				<button id="save_button" name="save_button"
+					class="btn btn-inverse">Create Guest Group</button>
+			</div>
+		</div>
+
+	</fieldset>
+
+</form>
+
+<legend>Guest Groups</legend>
+<table class="table condensed table-bordered table-hover" id="guest_groups_table">
+
+</table>
